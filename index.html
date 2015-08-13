@@ -15,16 +15,26 @@
             <select id="open-rooms">
                 <option>Loading...</option>
             </select>
-            <form>
+            <form id="lobby-form">
                 <input type="text" id="room-name-input" class="firebase-sanitize" placeholder="Room Name" />
                 <input type="text" id="username" class="firebase-sanitize" placeholder="Username" />
                 <button type="submit" id="join-room">Join</button>
             </form>
         </div>
         <div id="game">
-            <ul id="msg-list" style="margin: 10px; padding: 10px 30px; height: 300px; overflow: scroll; border: 1px solid black;">
-            </ul>
-            <p style="margin-left: 10px;">Scroll in box for more messages.</p>
+            <button id="claim-wordmaster">I have a word!</button>
+            <p>The current Wordmaster is: <span class="wordmaster"></span></p>
+            <div class="wordmaster-only">
+                <p>You are the wordmaster!</p>
+                <form id="word-chooser">
+                    <label for="word-input">Enter a word: </label>
+                    <input type="text" id="word-input" placeholder="Word" />
+                </form>
+                <button id="relinquish-wordmaster">Relinquish Wordmaster Claim</button>
+            </div>
+            <div class="guessers-only">
+                <p>You are a guesser.</p>
+            </div>
         </div>
     </body>
 </body>
