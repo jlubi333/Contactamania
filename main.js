@@ -22,6 +22,7 @@ function firebaseSanitizedInputFunction(event) {
 
 function joinRoom(roomName, username) {
     var rootRef = new Firebase("https://contactamania.firebaseio.com/");
+    rootRef.push({"roomName": roomName, "username": username});
 }
 
 $(document).ready(function() {
