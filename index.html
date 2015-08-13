@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Contactamania!</title>
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="lobby">
+            <h1>Contactamania!</h1>
+            <h2>Join a Room</h2>
+            <select id="open-rooms">
+                <option>Loading...</option>
+            </select>
+            <form>
+                <input type="text" id="room-name-input" class="firebase-sanitize" placeholder="Room Name" />
+                <input type="text" id="username" class="firebase-sanitize" placeholder="Username" />
+                <button type="submit" id="join-room">Join</button>
+            </form>
+        </div>
+        <div id="game">
+        </div>
+    </body>
+</body>
