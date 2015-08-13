@@ -23,6 +23,11 @@ function firebaseSanitizedInputFunction(event) {
 function joinRoom(roomName, username) {
     var rootRef = new Firebase("https://contactamania.firebaseio.com/");
     rootRef.push({"roomName": roomName, "username": username});
+    $("#msg-list").html("");
+    rootRef.on("child_added", function(snapshot) {
+        var data = snapshot.val();
+        $("#msg-list").append("<li>There once was a person named " + data.username + " who joined a room named " + data.roomName + ".</li>");
+    });
 }
 
 $(document).ready(function() {
